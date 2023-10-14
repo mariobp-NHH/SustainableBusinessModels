@@ -1,5 +1,4 @@
 from flask import render_template, Blueprint
-from capp.carbon_app.forms import AddRecordForm
 
 carbon_app=Blueprint('carbon_app',__name__)
 
