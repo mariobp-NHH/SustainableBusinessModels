@@ -13,13 +13,33 @@
           </p>
           <div class="container_buttons_links_header">
             <div class="btn">
-                <a href="#" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Paper</a>
+                <a href="#"  data-toggle="modal" data-target="#paper_Modal" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;"><i class="fa-regular fa-newspaper"></i> Material</a>
             </div>
             <div class="btn">
                 <a href="{{url_for('carbon_app.carbon_app_home')}}" class="btn btn-primary btn-lg mr-2", style="background-color:#007bff;">Carbon App</a>
             </div>
           </div>  
         </div>
+        <!-- Modal Paper -->
+        <div class="modal fade" id="paper_Modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg " style="height: 80%;" >
+        <div class="modal-content" style="height:100%">
+            <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Paper</h5>
+            <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <iframe id="paper_frame" src="/static/paper/paper.pdf" width="100%" height="100%"></iframe>  <!-- Using iframe to view the pdf file.-->
+            </div>
+            <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+        </div>
+        </div> 
+
+
+
         <div class="box">
           <img 
             src="{{url_for('static', filename='icons/methodology1.svg')}}"
@@ -27,8 +47,7 @@
             height="325"
             alt=""/>
         </div>
-      </div>
-      
+      </div>      
     </div>
 </section> 
 
